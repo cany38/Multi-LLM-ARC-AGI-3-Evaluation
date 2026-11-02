@@ -1,6 +1,6 @@
 # Transfer Learning Between Interactive Reasoning Agents in ARC-AGI-3
 
-Bachelor Semester Project 3 (BSP3) at the University of Luxembourg, by Can Yıldız and Nina, supervised by Matteo Magnini.
+Bachelor Semester Project 3 (BSP3) at the University of Luxembourg, by Can Yıldız and Nina Vojtassak, supervised by Matteo Magnini.
 
 ## The idea
 
