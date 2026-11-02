@@ -35,11 +35,11 @@ What moves between agents is kept in symbolic form. Before a candidate fact ente
 
 The language models run on NVIDIA's free endpoints:
 
-- MiniMax M3.1 Flash, our main model
+- MiniMax M3.1 Flash
 - Gemma 4 31B
-- Step 5 Preview, to be replaced by Muse Glimmer 30B if the preview is withdrawn
+- Step 5 Preview
+- Muse Glimmer 30B as a backup model
 
-The judge is Jev from TypeSafe AI. It answers with typed values, such as a choice from a list or the probability that a statement is true, so its output can go straight into the checks.
 
 ## Timeline
 
