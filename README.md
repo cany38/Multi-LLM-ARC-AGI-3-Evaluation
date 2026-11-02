@@ -36,7 +36,7 @@ What moves between agents is kept in symbolic form. Before a candidate fact ente
 The language models run on NVIDIA's free endpoints:
 
 - MiniMax M3.1 Flash
-- Gemma 4 31B
+- Gemma 4 31B (or gemini 3.5 flash lite)
 - Step 5 Preview
 - Muse Glimmer 30B as a backup model
 
