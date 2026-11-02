@@ -18,16 +18,16 @@ Each later agent plays the same game under four conditions:
 |---|---|
 | Baseline | nothing |
 | Full trajectory | every observation and action of the earlier agents |
-| Notes | free-text notes on the game's rules |
+| Notes | notes on the game's rules, in plain language |
 | Ontology | the same knowledge as facts in a small OWL ontology |
 
-The full trajectory is a control. Without it, an improvement could simply mean the model had a longer prompt. Notes and facts are limited to general rules, so an agent can't copy a ready-made solution. For every run we record success, actions, model calls, tokens and time.
+The full trajectory is a control. Without it, an improvement could simply mean the model had a longer prompt. Notes and facts are limited to general rules, so an agent can't simply copy a solution. For every run we record success, actions, model calls, tokens and time.
 
 We work on a small set of related games and leave the full benchmark aside.
 
-## Neuro-symbolic setup
+## Neurosymbolic setup
 
-A grounding step turns each game frame into symbols (objects, positions, what changed) and passes them on as JSON. A language model reads that state and picks the next action. Any other sub-symbolic model could take its place, so the agent only talks to an oracle interface and never knows which model sits behind it.
+A grounding step turns each game frame into symbols (objects, positions, what changed) and passes them on as JSON. A language model reads that state and picks the next action. Any other subsymbolic model could take its place, so the agent only talks to an oracle interface and never knows which model sits behind it.
 
 What moves between agents is kept in symbolic form. Before a candidate fact enters the ontology, a judge checks it against what the agent actually observed. The judge also flags notes that give away a concrete solution.
 
