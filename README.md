@@ -31,7 +31,7 @@ Knowledge that moves between agents stays symbolic. Before a fact enters the ont
 
 ## Models
 
-MiniMax M3.1 Flash runs the main experiments. Gemma 4 26B and Qwen 3.5 9B repeat a smaller set of runs, so we can see whether the results hold for other models, including a small one. MiniMax uses NVIDIA's free endpoint, Gemma uses Google AI Studio with OpenRouter as fallback, and Qwen runs on the university's HPC cluster over an SSH tunnel. The judge is a language model too.
+MiniMax M3.1 Flash runs the main experiments. Gemma 4 26B and Qwen 3.5 9B repeat a smaller set of runs, so we can see whether the results hold for other models, including a small one. MiniMax uses NVIDIA's free endpoint, Gemma uses Google AI Studio with OpenRouter as fallback, and Qwen runs on the university's HPC cluster over an SSH tunnel. The judge is a language model too but it can be google decision model too.
 
 ## Setup
 
