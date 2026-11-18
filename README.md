@@ -6,7 +6,7 @@ Bachelor Semester Project 3 (BSP3) at the University of Luxembourg, by Can Yıld
 
 In ARC-AGI-3 an agent starts a game without knowing the rules or the goal. It tries actions, watches what changes and works the game out as it plays. When the next game starts, everything it figured out is usually gone.
 
-We want to know whether that knowledge can be passed on. A first agent plays a game and writes down what it learned: which objects matter, how they move, what seems to finish a level. The next agent reads those notes before playing a related task, usually the next level or a game with similar rules, then adds what it learns itself. A third agent gets the notes of both. Over 3 to 10 tasks this becomes a chain of agents, each starting from what the previous ones left behind.
+We want to know whether that knowledge can be passed on. A first agent plays a game and writes down what it learned: which objects matter, how they move, what seems to finish a level. The next agent reads those notes before playing a related task, usually the next level or a game with similar rules, then adds what it learns itself. A third agent gets the notes of both. 3 tasks this becomes a chain of agents, each starting from what the previous ones left behind.
 
 Two questions drive the project. Do later agents need fewer actions and model calls? And does it matter how the knowledge is written down?
 
