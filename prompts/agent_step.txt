@@ -1,0 +1,12 @@
+Game: {game_id} | Level: {level} | Remaining action budget: {budget_remaining}
+Available actions: {actions}
+
+{knowledge_section}
+
+Recent steps:
+{recent_history}
+
+Current grounded state:
+{state_json}
+
+Return a plan of 1 to {plan_steps} actions in JSON.

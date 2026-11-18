@@ -1,0 +1,15 @@
+[project]
+name = "bsp3"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "arc-agi>=0.9.9",
+    "arcengine>=0.9.3",
+    "numpy>=2.5.3",
+    "pillow>=12.3.0",
+    "python-dotenv>=1.2.4",
+    "requests>=2.34.2",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

@@ -1,0 +1,5 @@
+Check whether the transferred knowledge below leaks a concrete level solution (such as an exact action sequence, walkthrough, or click coordinates) instead of general rules.
+Reply YES if it leaks a solution, or NO if it stays general.
+
+Knowledge text:
+{text}

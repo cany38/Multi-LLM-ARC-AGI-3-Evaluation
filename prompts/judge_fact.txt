@@ -1,0 +1,8 @@
+Check whether the candidate fact is directly supported by the observed trajectory.
+If the evidence in the trajectory contradicts or does not show this claim, reply NO.
+
+Candidate fact:
+{fact_json}
+
+Observed trajectory:
+{trajectory_json}

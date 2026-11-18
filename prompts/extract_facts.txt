@@ -1,0 +1,10 @@
+Extract general rules learned from this ARC-AGI-3 game run.
+Focus on object types, movement rules, interactions, and level completion conditions.
+Do not include coordinates, exact action sequences, or level-specific walkthroughs.
+
+Game: {game_id} | Level: {level} | Outcome: {outcome} | Steps: {steps_count}
+Trajectory:
+{trajectory_json}
+
+Reply with a JSON array only:
+[{"subject": "concept", "relation": "rule_relation", "object": "target_or_effect", "evidence": "short observation"}]

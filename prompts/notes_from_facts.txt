@@ -1,0 +1,5 @@
+Write short, clear plain-language notes summarizing these verified game rules for a future player.
+Keep only general mechanics and patterns. Never include coordinates or exact step-by-step solutions.
+
+Facts:
+{facts_json}

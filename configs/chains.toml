@@ -1,0 +1,113 @@
+[defaults]
+conditions = ["nothing", "trajectory", "notes", "ontology"]
+seeds = [0, 1, 2]
+model_profile = "minimax"
+suite = "cross"
+
+[suites]
+pilot = ["within_tu93", "chain2_click_align"]
+within = ["within_tu93", "within_ls20", "within_ft09", "within_lp85", "within_cd82"]
+cross = [
+  "chain1_grid_nav",
+  "chain2_click_align",
+  "chain3_pattern_grid",
+  "chain4_hud_board",
+  "chain5_barriers",
+]
+all = [
+  "within_tu93",
+  "within_ls20",
+  "within_ft09",
+  "within_lp85",
+  "within_cd82",
+  "chain1_grid_nav",
+  "chain2_click_align",
+  "chain3_pattern_grid",
+  "chain4_hud_board",
+  "chain5_barriers",
+]
+
+[chains.within_tu93]
+group = "within"
+description = "Same-game level transfer on corridor grid navigation (ACTION1-ACTION4)"
+tasks = [
+  { game_id = "tu93-0768757b", level = 0 },
+  { game_id = "tu93-0768757b", level = 1 },
+]
+
+[chains.within_ls20]
+group = "within"
+description = "Same-game level transfer with progress HUD and pickups (ACTION1-ACTION4)"
+tasks = [
+  { game_id = "ls20-9607627b", level = 0 },
+  { game_id = "ls20-9607627b", level = 1 },
+]
+
+[chains.within_ft09]
+group = "within"
+description = "Same-game level transfer on 2x2 block click puzzle (ACTION6)"
+tasks = [
+  { game_id = "ft09-0d8bbf25", level = 0 },
+  { game_id = "ft09-0d8bbf25", level = 1 },
+]
+
+[chains.within_lp85]
+group = "within"
+description = "Same-game level transfer on color ring click puzzle (ACTION6)"
+tasks = [
+  { game_id = "lp85-305b61c3", level = 0 },
+  { game_id = "lp85-305b61c3", level = 1 },
+]
+
+[chains.within_cd82]
+group = "within"
+description = "Same-game level transfer with top-left color reference (ACTION1-ACTION6)"
+tasks = [
+  { game_id = "cd82-fb555c5d", level = 0 },
+  { game_id = "cd82-fb555c5d", level = 1 },
+]
+
+[chains.chain1_grid_nav]
+group = "cross"
+description = "Cross-game corridor navigation and goal reaching (ACTION1-ACTION4)"
+tasks = [
+  { game_id = "tu93-0768757b", level = 0 },
+  { game_id = "ls20-9607627b", level = 0 },
+  { game_id = "wa30-ee6fef47", level = 0 },
+]
+
+[chains.chain2_click_align]
+group = "cross"
+description = "Cross-game click-only spatial alignment (ACTION6)"
+tasks = [
+  { game_id = "vc33-5430563c", level = 0 },
+  { game_id = "s5i5-18d95033", level = 0 },
+  { game_id = "su15-1944f8ab", level = 0 },
+]
+
+[chains.chain3_pattern_grid]
+group = "cross"
+description = "Cross-game tile grids from click-only to keyboard-click"
+tasks = [
+  { game_id = "lp85-305b61c3", level = 0 },
+  { game_id = "ft09-0d8bbf25", level = 0 },
+  { game_id = "sc25-635fd71a", level = 0 },
+]
+
+[chains.chain4_hud_board]
+group = "cross"
+description = "Cross-game reference HUD paired with board manipulation"
+tasks = [
+  { game_id = "sb26-7fbdac44", level = 0 },
+  { game_id = "cd82-fb555c5d", level = 0 },
+  { game_id = "tr87-cd924810", level = 0 },
+]
+
+[chains.chain5_barriers]
+group = "cross"
+description = "Cross-game divided rooms, barriers, and paired panels"
+tasks = [
+  { game_id = "ka59-38d34dbb", level = 0 },
+  { game_id = "sk48-d8078629", level = 0 },
+  { game_id = "dc22-fdcac232", level = 0 },
+]

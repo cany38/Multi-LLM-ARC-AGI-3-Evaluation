@@ -1,0 +1,53 @@
+[providers.gemini]
+kind = "gemini"
+base_url = "https://generativelanguage.googleapis.com/v1beta"
+keys_env = ["GEMINI_API_KEYS", "GEMINI_API_KEY"]
+timeout_s = 120.0
+cooldown_s = 15.0
+max_wait_s = 5.0
+min_interval_s = 0.0
+# "High demand" 503s come in short bursts; 4 rounds over the keys with 5 s pauses ride them out.
+attempts = 12
+
+[providers.nvidia]
+kind = "openai_compat"
+base_url_env = "LLM_BASE_URL"
+default_base_url = "https://integrate.api.nvidia.com/v1"
+keys_env = ["NVIDIA_API_KEY"]
+timeout_s = 300.0
+cooldown_s = 20.0
+max_wait_s = 45.0
+min_interval_s = 2.0
+stream = true
+
+[providers.hpc]
+kind = "openai_compat"
+base_url_env = "QWEN_BASE_URL"
+default_base_url = "http://localhost:8000/v1"
+keys_env = ["QWEN_API_KEY"]
+timeout_s = 120.0
+cooldown_s = 10.0
+max_wait_s = 5.0
+min_interval_s = 0.0
+
+[[models.gemma]]
+provider = "gemini"
+model = "gemma-4-26b-a4b-it"
+# Default thinking runs past maxOutputTokens on game prompts; "minimal" is the only level the API accepts.
+thinking_level = "minimal"
+
+[[models.minimax]]
+provider = "nvidia"
+model = "minimaxai/minimax-m3.1-flash"
+# Medium effort ran past 4096 tokens on 8 of 10 ar25 steps; low stays short and still plans.
+max_tokens = 8192
+extra_body = { reasoning_effort = "low" }
+
+[[models.qwen]]
+provider = "hpc"
+model_env = "QWEN_MODEL"
+default_model = "qwen3.5-9b"
+
+[[models.mock]]
+provider = "mock"
+model = "mock"

@@ -1,0 +1,13 @@
+Convert these verified game rules into a concise OWL ontology in Turtle format.
+Use these prefixes:
+@prefix arc: <http://bsp3.local/arc#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+Include only general classes, properties, and rules derived from the facts. Do not invent facts.
+Keep the ontology compact (roughly 10 to 25 triples covering the main transferable rules).
+Reply with valid Turtle only.
+
+Facts:
+{facts_json}

@@ -1,0 +1,30 @@
+[agent]
+plan_steps = 5
+budget_multiplier = 3.0
+default_max_steps = 100
+max_history_steps = 15
+temperature = 0.0
+max_tokens = 4096
+
+[grounding]
+connectivity = 4
+max_objects = 64
+
+[knowledge]
+temperature = 0.0
+max_tokens = 8192
+max_trajectory_steps = 30
+max_trajectory_chars = 12000
+
+[judge]
+model_profile = "minimax"
+temperature = 0.0
+max_tokens = 2048
+
+[paths]
+prompts_dir = "prompts"
+runs_dir = "runs"
+store_dir = "data/knowledge"
+
+[conditions]
+valid = ["nothing", "trajectory", "notes", "ontology"]
