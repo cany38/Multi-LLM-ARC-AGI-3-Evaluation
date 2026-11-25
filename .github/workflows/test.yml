@@ -1,0 +1,28 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install Python 3.12 and dependencies
+        run: |
+          uv python install 3.12
+          uv sync --locked
+
+      - name: Run unit and system tests with coverage
+        run: uv run --with pytest --with pytest-cov pytest --cov=bsp3 --cov-report=term-missing tests
